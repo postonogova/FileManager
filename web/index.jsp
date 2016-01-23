@@ -24,10 +24,10 @@
         <td colspan="2" class="Panel"><div  id="rTable" class="Table"></div></td>
     </tr>
     <tr id="ToolBar" class="ToolBar">
-        <td id="ToolBar" class="btnToolBar"></td>
-        <td class="btnToolBar"></td>
-        <td class="btnToolBar"></td>
-        <td class="btnToolBar"></td>
+        <td id="btnCopy" class="btnToolBar"></td>
+        <td id="btnMove" class="btnToolBar"></td>
+        <td id="btnFolder" class="btnToolBar"></td>
+        <td id="btnDelete" class="btnToolBar"></td>
     </tr>
 </table>
 

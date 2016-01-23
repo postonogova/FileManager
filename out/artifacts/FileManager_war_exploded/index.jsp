@@ -23,8 +23,11 @@
         <td colspan="2" class="Panel"><div id="lTable" class="Table"></div></td>
         <td colspan="2" class="Panel"><div  id="rTable" class="Table"></div></td>
     </tr>
-    <tr>
-        <td colspan="4" id="ToolBar" class="ToolBar"></td>
+    <tr id="ToolBar" class="ToolBar">
+        <td id="btnCopy" class="btnToolBar"></td>
+        <td id="btnMove" class="btnToolBar"></td>
+        <td id="btnFolder" class="btnToolBar"></td>
+        <td id="btnDelete" class="btnToolBar"></td>
     </tr>
 </table>
 

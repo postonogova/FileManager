@@ -48,14 +48,17 @@ input, select {
     width: 100%;
 }
 
-input input[type="button"] {
+.btnToolBar {
     width: 25%;
-    padding: 0;
-    margin: 0;
+    padding: 2px;
 }
 
 .Table tbody tr:hover {
     background: #CEE2D3;
+}
+
+.Table tbody tr {
+    width: 10%;
 }
 
 .Table thead td{
@@ -64,4 +67,8 @@ input input[type="button"] {
 
     padding: 3px; /* Поля вокруг содержимого таблицы */
     border: 1px solid #000; /* Параметры рамки */
+}
+
+.clicked_Row {
+    background-color: lightgreen;
 }
