@@ -26,13 +26,16 @@ body {
     height: 0;
 }
 
-.Path {
-    width: 50%;
+.Disk {
+    width: 0;
 }
+
+/*.Path {
+    width: 49%;
+}*/
 
 .Table {
     width: 100%;
-    /*vertical-align: top;*/
     height: 100%;
     overflow: auto;
 }
@@ -41,22 +44,12 @@ body {
     width: 50%;
 }
 
-.Table tbody tr:hover {
-    background: #CEE2D3; /* Цвет фона при наведении */
-    /*color: #CEE2D3; /* Цвет текста при наведении */
+input, select {
+    width: 100%;
 }
 
-/*.Table table {
-    overflow: scroll;
-}*/
-
-/*.Disk {
-    width: 15%;
-    text-align: center;
-}*/
-
-input {
-    width: 100%;
+.Table tbody tr:hover {
+    background: #CEE2D3;
 }
 
 .Table thead td{

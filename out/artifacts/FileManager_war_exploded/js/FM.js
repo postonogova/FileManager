@@ -110,6 +110,8 @@
         var rTableNode = FM.renderTable(model.Right);
         viewMosel.Right.TableNode = rTableNode;
         _appendChild("rTable", rTableNode);
+
+        FM.renderToolBar();
     };
 
     FM.onDiskChanged = function(panel, disk){
@@ -204,6 +206,20 @@
         });
         return tableNode;
     };
+
+    FM.renderToolBar = function() {
+        var btnCopy = document.createElement("input");
+        btnCopy.type = "button";
+        btnCopy.class = "btnToolBar";
+        btnCopy.value = "Копирование";
+        var btnMove = document.createElement("input");
+        btnMove.type = "button";
+        btnMove.value = "Копирование";
+        document.getElementById("ToolBar").innerHTML = "";
+        document.getElementById("ToolBar").appendChild(btnCopy);
+        document.getElementById("ToolBar").appendChild(btnMove);
+        //textNode.disabled = true;
+    }
 
     FM.refreshPath = function(panel) {
         if (panel.id == "Left") {
