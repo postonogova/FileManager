@@ -188,6 +188,32 @@
         })
     };
 
+    FM.onMoveFiles = function(sourceFile, destDirectory) {
+        return $.ajax({
+            type: 'POST',
+            url: 'MoveFiles',
+            data: {sourceFile: sourceFile,
+                destDirectory: destDirectory
+            },
+            success: function (result) {
+                FM.onPathChanged(model.Left, model.Left.Path);
+                FM.onPathChanged(model.Right, model.Right.Path);
+            }
+        })
+    };
+
+    FM.onDeleteFiles = function(sourceFile, panel) {
+        return $.ajax({
+            type: 'POST',
+            url: 'DeleteFiles',
+            data: {sourceFile: sourceFile,
+            },
+            success: function (result) {
+                FM.onPathChanged(panel, panel.Path);
+            }
+        })
+    };
+
     FM.renderDisk = function (panel) {
         var selectNode = document.createElement("select");
         for (var i = 0; i < panel.Disks.length; i++) {
@@ -278,8 +304,38 @@
             }
         );
         var btnMove = _cresteButton("btnMove", "Перемещение");
+        $(btnMove).click(
+            function() {
+                if (model.Left.active) {
+                    model.Left.Selection.forEach(function (item, i, seliction) {
+                        FM.onMoveFiles(item.directory, model.Right.Path);
+                    });
+                }
+                if (model.Right.active) {
+                    model.Right.Selection.forEach(function (item, i, seliction) {
+                        FM.onMoveFiles(item.directory, model.Left.Path);
+                    });
+                }
+
+            }
+        );
         var btnFolder = _cresteButton("btnFolder", "Каталог");
         var btnDelete = _cresteButton("btnDelete", "Удаление");
+        $(btnDelete).click(
+            function() {
+                if (model.Left.active) {
+                    model.Left.Selection.forEach(function (item, i, seliction) {
+                        FM.onDeleteFiles(item.directory, model.Left);
+                    });
+                }
+                if (model.Right.active) {
+                    model.Right.Selection.forEach(function (item, i, seliction) {
+                        FM.onDeleteFiles(item.directory, model.Right);
+                    });
+                }
+
+            }
+        );
     }
 
     FM.refreshPath = function (panel) {

@@ -3,9 +3,7 @@ package Model;
 import javax.servlet.jsp.tagext.TagFileInfo;
 import javax.swing.*;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.LinkOption;
-import java.nio.file.StandardCopyOption;
+import java.nio.file.*;
 import java.util.*;
 import java.io.File;
 
@@ -77,4 +75,21 @@ public class FileManager {
                 Files.copy(source.toPath(), dest.toPath().resolve(source.toPath().getFileName()), StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES, LinkOption.NOFOLLOW_LINKS);
         }
     }
+
+    public static void MoveFiles(String sourceFile, String destDirectory) throws IOException {
+
+        if((!sourceFile.isEmpty()) && (!destDirectory.isEmpty())) {
+            File dest = new File(destDirectory);
+            File source = new File(sourceFile);
+            Files.move(source.toPath(), dest.toPath().resolve(source.toPath().getFileName()), StandardCopyOption.REPLACE_EXISTING);
+        }
+    }
+
+    public static void DeleteFiles(String sourceFile) throws IOException {
+        if(!sourceFile.isEmpty()) {
+            Path pathSource = Paths.get(sourceFile);
+            Files.delete(pathSource);
+        }
+    }
+
 }
