@@ -129,7 +129,7 @@
         FM.getFiles(path, function (files) {
             panel.Files = files;
             panel.Path = path;
-            viewModel.Right.SelectRow.forEach(function(item, i, seliction) {
+            viewModel.Right.SelectRow.forEach(function (item, i, seliction) {
                 item.className = "";
             });
             model.Right.Selection.length = 0;
@@ -146,22 +146,22 @@
         });
     }
 
-    FM.onSelectChanged = function (panel, row, file){
-        if(panel.id == "Left") {
+    FM.onSelectChanged = function (panel, row, file) {
+        if (panel.id == "Left") {
             var vModel = viewModel.Left;
         }
-        if(panel.id == "Right") {
+        if (panel.id == "Right") {
             var vModel = viewModel.Right;
         }
-        if(!panel.active) {
-            if(panel.id == "Left") {
+        if (!panel.active) {
+            if (panel.id == "Left") {
                 _changeFocus(model.Right, model.Left, viewModel.Right);
             }
-            if(panel.id == "Right") {
+            if (panel.id == "Right") {
                 _changeFocus(model.Left, model.Right, viewModel.Left);
             }
         }
-        if(row.className == "") {
+        if (row.className == "") {
             row.className = "clicked_Row";
             vModel.SelectRow[vModel.SelectRow.length] = row;
             panel.Selection[panel.Selection.length] = file;
@@ -175,11 +175,12 @@
         }
     };
 
-    FM.onCopyFiles = function(sourceFile, destDirectory, panel) {
+    FM.onCopyFiles = function (sourceFile, destDirectory, panel) {
         return $.ajax({
             type: 'POST',
             url: 'CopyFiles',
-            data: {sourceFile: sourceFile,
+            data: {
+                sourceFile: sourceFile,
                 destDirectory: destDirectory
             },
             success: function (result) {
@@ -188,11 +189,12 @@
         })
     };
 
-    FM.onMoveFiles = function(sourceFile, destDirectory) {
+    FM.onMoveFiles = function (sourceFile, destDirectory) {
         return $.ajax({
             type: 'POST',
             url: 'MoveFiles',
-            data: {sourceFile: sourceFile,
+            data: {
+                sourceFile: sourceFile,
                 destDirectory: destDirectory
             },
             success: function (result) {
@@ -202,11 +204,26 @@
         })
     };
 
-    FM.onDeleteFiles = function(sourceFile, panel) {
+    FM.onDeleteFiles = function (sourceFile, panel) {
         return $.ajax({
             type: 'POST',
             url: 'DeleteFiles',
-            data: {sourceFile: sourceFile,
+            data: {
+                sourceFile: sourceFile,
+            },
+            success: function (result) {
+                FM.onPathChanged(panel, panel.Path);
+            }
+        })
+    };
+
+    FM.onCreateDirectory = function (nameDirectory, panel) {
+        return $.ajax({
+            type: 'POST',
+            url: 'CreateDirectory',
+            data: {
+                nameDirectory: nameDirectory,
+                path: panel.Path
             },
             success: function (result) {
                 FM.onPathChanged(panel, panel.Path);
@@ -246,50 +263,61 @@
         var hCell = hRow.insertCell(0);
         hCell.innerHTML = "<b>Имя</b>";
         hCell = hRow.insertCell(1);
-        hCell.innerHTML = "<b>Тип</b>";
-        hCell = hRow.insertCell(2);
         hCell.innerHTML = "<b>Размер</b>";
-        hCell = hRow.insertCell(3);
+        hCell = hRow.insertCell(2);
         hCell.innerHTML = "<b>Дата измерения</b>";
+        hCell = hRow.insertCell(3);
+        hCell.innerHTML = "<b>Атрибуты</b>";
         var body = tableNode.createTBody();
         panel.Files.forEach(function (item, i, files) {
             var bRow = body.insertRow(i);
             var bCell = bRow.insertCell(0);
             bCell.innerHTML = item.nameFile;
-            bCell = bRow.insertCell(1);
-            bCell.innerHTML = item.typeFile;
+            if (item.typeFile == "folder") {
+                var temp = bCell.innerHTML;
+                bCell.innerHTML = "<img src='images/folder.png' width='25' height='25' align='left'>" + temp;
+                bCell = bRow.insertCell(1);
+                bCell.innerHTML = "<папка>";
+            }
+            else {
+                _addIcon(bCell, item.typeFile);
+                bCell = bRow.insertCell(1);
+                bCell.innerHTML = item.sizeFile;
+            }
             bCell = bRow.insertCell(2);
-            bCell.innerHTML = item.sizeFile;
-            bCell = bRow.insertCell(3);
             var date = new Date(item.dateChange);
             bCell.innerHTML = date.toLocaleString();
-            //if(item.typeFile == "folder") {
-            $(bRow).dblclick(
-                // item - не изменится, т.к. он не меняется в родительском контексте
-                function () {
-                    FM.onPathChanged(panel, item.directory);
-                }
-                // Для случая, когда item может измениться
-                /*(function (item) {
-                 return function (){
+            bCell = bRow.insertCell(3);
+            bCell.innerHTML = item.attributes;
+            if (item.typeFile == "folder") {
+                $(bRow).dblclick(
+                    // item - не изменится, т.к. он не меняется в родительском контексте
+                    function () {
+                        FM.onPathChanged(panel, item.directory);
+                    }
+                    // Для случая, когда item может измениться
+                    /*(function (item) {
+                     return function (){
 
-                 };
-                 })(item)*/
-            );
-            $(bRow).click(
-                function () {
-                    FM.onSelectChanged(panel, bRow, item)
-                }
-            );
-            // }
-        });
+                     };
+                     })(item)*/
+                );
+            }
+        $(bRow).click(
+            function () {
+                FM.onSelectChanged(panel, bRow, item)
+            }
+        );
+        // }
+    })
+        ;
         return tableNode;
     };
 
     FM.renderToolBar = function () {
         var btnCopy = _cresteButton("btnCopy", "Копирование");
         $(btnCopy).click(
-            function() {
+            function () {
                 if (model.Left.active) {
                     model.Left.Selection.forEach(function (item, i, seliction) {
                         FM.onCopyFiles(item.directory, model.Right.Path, model.Right);
@@ -303,9 +331,10 @@
 
             }
         );
+
         var btnMove = _cresteButton("btnMove", "Перемещение");
         $(btnMove).click(
-            function() {
+            function () {
                 if (model.Left.active) {
                     model.Left.Selection.forEach(function (item, i, seliction) {
                         FM.onMoveFiles(item.directory, model.Right.Path);
@@ -319,21 +348,38 @@
 
             }
         );
+
         var btnFolder = _cresteButton("btnFolder", "Каталог");
+        $(btnFolder).click(
+            function () {
+                var result = prompt("Создать новый каталог (папку)", "Новая папка");
+                if (result != null) {
+                    if (model.Left.active) {
+                        FM.onCreateDirectory(result, model.Left);
+                    }
+                    if (model.Right.active) {
+                        FM.onCreateDirectory(result, model.Right);
+                    }
+                }
+            }
+        );
+
         var btnDelete = _cresteButton("btnDelete", "Удаление");
         $(btnDelete).click(
-            function() {
-                if (model.Left.active) {
-                    model.Left.Selection.forEach(function (item, i, seliction) {
-                        FM.onDeleteFiles(item.directory, model.Left);
-                    });
+            function () {
+                var result = confirm("Удалить файлы?");
+                if (result) {
+                    if (model.Left.active) {
+                        model.Left.Selection.forEach(function (item, i, seliction) {
+                            FM.onDeleteFiles(item.directory, model.Left);
+                        });
+                    }
+                    if (model.Right.active) {
+                        model.Right.Selection.forEach(function (item, i, seliction) {
+                            FM.onDeleteFiles(item.directory, model.Right);
+                        });
+                    }
                 }
-                if (model.Right.active) {
-                    model.Right.Selection.forEach(function (item, i, seliction) {
-                        FM.onDeleteFiles(item.directory, model.Right);
-                    });
-                }
-
             }
         );
     }
@@ -363,10 +409,56 @@
     function _changeFocus(oldFocusPanel, newFocusPanel, oldViewFocusPanel) {
         newFocusPanel.active = true;
         oldFocusPanel.active = false;
-        oldViewFocusPanel.SelectRow.forEach(function(item, i, seliction) {
+        oldViewFocusPanel.SelectRow.forEach(function (item, i, seliction) {
             item.className = "";
         });
         oldFocusPanel.Selection.length = 0;
+    }
+
+    function _addIcon(cell, typeFile) {
+        var temp = cell.innerHTML;
+        var str = "images/";
+        switch (typeFile) {
+            case "folder": str += "folder.png";
+                break;
+            case "acc":
+            case "avi":
+            case "bmp":
+            case "cue":
+            case "divx":
+            case "doc":
+            case "eps":
+            case "flac":
+            case "flv":
+            case "gif":
+            case "html":
+            case "indd":
+            case "inx":
+            case "iso":
+            case "jpg":
+            case "mov":
+            case "mp3":
+            case "mpg":
+            case "php":
+            case "png":
+            case "ppt":
+            case "psd":
+            case "qxd":
+            case "qxp":
+            case "raw":
+            case "rtf":
+            case "svg":
+            case "txt":
+            case "vcf":
+            case "wav":
+            case "wma":
+            case "xls":
+            case "xml": str += "file_" + typeFile + ".png";
+                break;
+            default: str += "document.png";
+        }
+
+        cell.innerHTML = "<img src="+str+" width='25' height='25' align='left'>" + temp;
     }
 
 })();

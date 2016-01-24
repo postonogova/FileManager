@@ -59,13 +59,15 @@ input, select {
 
 .Table tbody tr {
     width: 10%;
+    padding: 2px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid #000; /* Параметры рамки */
 }
 
 .Table thead td{
     background: #afd792; /* Цвет фона */
     color: #333;  /* Цвет текста */
 
-    padding: 3px; /* Поля вокруг содержимого таблицы */
+    padding: 2px; /* Поля вокруг содержимого таблицы */
     border: 1px solid #000; /* Параметры рамки */
 }
 
