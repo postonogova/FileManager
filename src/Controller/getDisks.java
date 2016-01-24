@@ -1,7 +1,7 @@
 package Controller;
 
 import Model.FileInfo;
-import Model.Files;
+import Model.FileManager;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -19,7 +19,7 @@ public class getDisks extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<FileInfo> obj = Files.getDisks();
+        List<FileInfo> obj = FileManager.getDisks();
         Gson gson = new Gson();
         String json = gson.toJson(obj);
         response.getWriter().write(json);

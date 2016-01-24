@@ -2,13 +2,17 @@ package Model;
 
 import javax.servlet.jsp.tagext.TagFileInfo;
 import javax.swing.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.LinkOption;
+import java.nio.file.StandardCopyOption;
 import java.util.*;
 import java.io.File;
 
 /**
  * Created by Serg on 09.01.2016.
  */
-public class Files {
+public class FileManager {
 
 
     static List<FileInfo> disks;
@@ -35,7 +39,7 @@ public class Files {
         else return "";
     }
 
-    public Files() {
+    public FileManager() {
     }
 
     public static List<FileInfo> GetFiles(String directory) {
@@ -60,6 +64,17 @@ public class Files {
             }
         }
         return fileInfoList;
-        //return fileInfoList;
+    }
+
+    public static void CopyFiles(String sourceFile, String destDirectory) throws IOException {
+
+        if((!sourceFile.isEmpty()) && (!destDirectory.isEmpty())) {
+            File dest = new File(destDirectory);
+                File source = new File(sourceFile);
+            if (source.listFiles() != null) {
+                //переместить все дочерние
+            }
+                Files.copy(source.toPath(), dest.toPath().resolve(source.toPath().getFileName()), StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES, LinkOption.NOFOLLOW_LINKS);
+        }
     }
 }

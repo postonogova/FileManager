@@ -1,7 +1,7 @@
 package Controller;
 
 import Model.FileInfo;
-import Model.Files;
+import Model.FileManager;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -22,16 +22,12 @@ public class getFiles extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         response.setContentType("text/plain; charset=utf-8");
         response.setCharacterEncoding("UTF-8");
         String directory = request.getParameter("directory");
-        List<FileInfo> obj = Files.GetFiles(directory);
+        List<FileInfo> obj = FileManager.GetFiles(directory);
         Gson gson = new Gson();
         String json = gson.toJson(obj);
         response.getWriter().write(json);
-//        byte[] utf8JsonString = json.getBytes("UTF8");
-//        var responseToClient = new DataOutputStream(connectedClient.getOutputStream());
-//        responseToClient.write(utf8JsonString, 0, utf8JsonString.Length);
     }
 }

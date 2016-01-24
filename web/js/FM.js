@@ -155,20 +155,10 @@
         }
         if(!panel.active) {
             if(panel.id == "Left") {
-                model.Left.active = true;
-                model.Right.active = false;
-                viewModel.Right.SelectRow.forEach(function(item, i, seliction) {
-                    item.className = "";
-                });
-                model.Right.Selection.length = 0;
+                _changeFocus(model.Right, model.Left, viewModel.Right);
             }
             if(panel.id == "Right") {
-                model.Right.active = true;
-                model.Left.active = false;
-                viewModel.Left.SelectRow.forEach(function(item, i, seliction) {
-                    item.className = "";
-                });
-                model.Left.Selection.length = 0;
+                _changeFocus(model.Left, model.Right, viewModel.Left);
             }
         }
         if(row.className == "") {
@@ -178,7 +168,24 @@
         }
         else {
             row.className = "";
+            var i = vModel.SelectRow.indexOf(row);
+            vModel.SelectRow.splice(i, 1);
+            i = panel.Selection.indexOf(file);
+            panel.Selection.splice(i, 1);
         }
+    };
+
+    FM.onCopyFiles = function(sourceFile, destDirectory, panel) {
+        return $.ajax({
+            type: 'POST',
+            url: 'CopyFiles',
+            data: {sourceFile: sourceFile,
+                destDirectory: destDirectory
+            },
+            success: function (result) {
+                FM.onPathChanged(panel, panel.Path);
+            }
+        })
     };
 
     FM.renderDisk = function (panel) {
@@ -254,10 +261,25 @@
     };
 
     FM.renderToolBar = function () {
-        _cresteButton("btnCopy", "Копирование");
-        _cresteButton("btnMove", "Перемещение");
-        _cresteButton("btnFolder", "Каталог");
-        _cresteButton("btnDelete", "Удаление");
+        var btnCopy = _cresteButton("btnCopy", "Копирование");
+        $(btnCopy).click(
+            function() {
+                if (model.Left.active) {
+                    model.Left.Selection.forEach(function (item, i, seliction) {
+                        FM.onCopyFiles(item.directory, model.Right.Path, model.Right);
+                    });
+                }
+                if (model.Right.active) {
+                    model.Right.Selection.forEach(function (item, i, seliction) {
+                        FM.onCopyFiles(item.directory, model.Left.Path, model.Left);
+                    });
+                }
+
+            }
+        );
+        var btnMove = _cresteButton("btnMove", "Перемещение");
+        var btnFolder = _cresteButton("btnFolder", "Каталог");
+        var btnDelete = _cresteButton("btnDelete", "Удаление");
     }
 
     FM.refreshPath = function (panel) {
@@ -274,11 +296,21 @@
         btnToolBar.type = "button";
         btnToolBar.value = name;
         _appendChild(idParent, btnToolBar);
+        return btnToolBar;
     }
 
     function _appendChild(id, node) {
         document.getElementById(id).innerHTML = "";
         document.getElementById(id).appendChild(node);
+    }
+
+    function _changeFocus(oldFocusPanel, newFocusPanel, oldViewFocusPanel) {
+        newFocusPanel.active = true;
+        oldFocusPanel.active = false;
+        oldViewFocusPanel.SelectRow.forEach(function(item, i, seliction) {
+            item.className = "";
+        });
+        oldFocusPanel.Selection.length = 0;
     }
 
 })();
