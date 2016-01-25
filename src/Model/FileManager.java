@@ -1,16 +1,10 @@
 package Model;
 
-import javax.servlet.jsp.tagext.TagFileInfo;
-import javax.swing.*;
 import java.io.IOException;
 import java.nio.file.*;
-import java.nio.file.attribute.BasicFileAttributes;
 import java.util.*;
 import java.io.File;
 
-/**
- * Created by Serg on 09.01.2016.
- */
 public class FileManager {
 
 
@@ -74,32 +68,31 @@ public class FileManager {
 
     public static void CopyFiles(String sourceFile, String destDirectory) throws IOException {
         if((!sourceFile.isEmpty()) && (!destDirectory.isEmpty())) {
-            Path pathSource = Paths.get(sourceFile);
-            Path pathDestination = Paths.get(destDirectory);
-            try {
-                Files.walkFileTree(pathSource, new MyFileCopyVisitor(pathSource, pathDestination));
-                System.out.println("Files copied successfully!");
-            } catch (IOException e) {
-                e.printStackTrace();
+            Path dest = Paths.get(destDirectory);
+            Path source = Paths.get(sourceFile);
+            copy(source, dest);
+        }
+    }
+
+    static void copy(Path sourceFile, Path destDirectory) throws IOException {
+        Path copySource = Files.copy(sourceFile, destDirectory.resolve(sourceFile.getFileName()), StandardCopyOption.REPLACE_EXISTING);//, StandardCopyOption.COPY_ATTRIBUTES, LinkOption.NOFOLLOW_LINKS);
+        if (sourceFile.toFile().isDirectory()) {
+            if(sourceFile.toFile().listFiles().length != 0) {
+                File[] listFiles = sourceFile.toFile().listFiles();
+                for (int i = 0; i < listFiles.length; i++) {
+                    File c = listFiles[i];
+                    copy(c.toPath(), copySource);
+                }
             }
         }
-
-        /*if((!sourceFile.isEmpty()) && (!destDirectory.isEmpty())) {
-            File dest = new File(destDirectory);
-                File source = new File(sourceFile);
-            if (source.listFiles() != null) {
-                //переместить все дочерние
-            }
-                Files.copy(source.toPath(), dest.toPath().resolve(source.toPath().getFileName()), StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES, LinkOption.NOFOLLOW_LINKS);
-        }*/
     }
 
     public static void MoveFiles(String sourceFile, String destDirectory) throws IOException {
 
         if((!sourceFile.isEmpty()) && (!destDirectory.isEmpty())) {
-            File dest = new File(destDirectory);
-            File source = new File(sourceFile);
-            Files.move(source.toPath(), dest.toPath().resolve(source.toPath().getFileName()), StandardCopyOption.REPLACE_EXISTING);
+            Path dest = Paths.get(destDirectory);
+            Path source = Paths.get(sourceFile);
+            Files.move(source, dest.resolve(source.getFileName()), StandardCopyOption.REPLACE_EXISTING);
         }
     }
 
@@ -108,7 +101,6 @@ public class FileManager {
             Path pathSource = Paths.get(sourceFile);
             try {
                 delete(pathSource.toFile());
-                Files.createDirectory(pathSource);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -119,8 +111,7 @@ public class FileManager {
         if (f.isDirectory()) {
             if(f.listFiles().length != 0) {
                 File[] listFiles = f.listFiles();
-                int i;
-                for (i = listFiles.length-1; i >= 0; i--) {
+                for (int i = listFiles.length-1; i >= 0; i--) {
                     File c = listFiles[i];
                     delete(c);
                 }
@@ -137,35 +128,19 @@ public class FileManager {
         }
     }
 
-}
-
-class MyFileCopyVisitor extends SimpleFileVisitor {
-    private Path source, destination;
-
-    public MyFileCopyVisitor(Path s, Path d) {
-        source = s;
-        destination = d;
-    }
-
-    public FileVisitResult visitFile(Path path,
-                                     BasicFileAttributes fileAttributes) {
-        Path newd = destination.resolve(source.relativize(path));
-        try {
-            Files.copy(path, newd, StandardCopyOption.REPLACE_EXISTING);
-        } catch (IOException e) {
-            e.printStackTrace();
+    public static String GetParent(String path) {
+        if(!path.isEmpty()) {
+            Path pathSource = Paths.get(path);
+            if(pathSource.getParent() != null) {
+                return pathSource.getParent().toString();
+            }
+            else {
+                return pathSource.toString();
+            }
         }
-        return FileVisitResult.CONTINUE;
+        else {
+            return disks.get(0).directory;
+        }
     }
 
-    public FileVisitResult preVisitDirectory(Path path,
-                                             BasicFileAttributes fileAttributes) {
-        Path newd = destination.resolve(source.relativize(path));
-        try {
-            Files.copy(path, newd, StandardCopyOption.REPLACE_EXISTING);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return FileVisitResult.CONTINUE;
-    }
 }

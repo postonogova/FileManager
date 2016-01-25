@@ -2,9 +2,6 @@ package Model;
 
 import java.util.Date;
 
-/**
- * Created by Serg on 10.01.2016.
- */
 public class FileInfo {
     String directory;
     String nameFile;

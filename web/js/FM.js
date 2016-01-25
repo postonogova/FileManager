@@ -1,6 +1,3 @@
-/**
- * Created by postonogova on 18.01.2016.
- */
 (function () {
 
     var FM = window.FM = {};
@@ -39,7 +36,6 @@
             SelectRow: []
         }
     }
-
 
     FM.init = function () {
         // Get disks
@@ -100,6 +96,11 @@
         viewModel.Right.SelectNode = rSelectNode;
         _appendChild("rDisk", rSelectNode);
 
+        FM.renderBtnRefresh("lBtnRefresh", model.Left);
+        FM.renderBtnRefresh("rBtnRefresh", model.Right);
+        FM.renderGoUp("lBtnUp", model.Left);
+        FM.renderGoUp("rBtnUp", model.Right);
+
         var lTextNode = FM.renderPath(model.Left);
         viewModel.Left.TextNode = lTextNode;
         _appendChild("lPath", lTextNode);
@@ -133,6 +134,10 @@
                 item.className = "";
             });
             model.Right.Selection.length = 0;
+            viewModel.Left.SelectRow.forEach(function (item, i, seliction) {
+                item.className = "";
+            });
+            model.Left.Selection.length = 0;
             FM.refreshPath(panel);
             var tableNode = FM.renderTable(panel);
             if (panel.id == "Left") {
@@ -231,6 +236,21 @@
         })
     };
 
+    FM.onGoUp = function (panel) {
+        return $.ajax({
+            type: 'POST',
+            url: 'GetParent',
+            data: {
+                path: panel.Path
+            },
+            success: function (result) {
+                var newPath = (result == null)? panel.Path : result;
+                panel.Path = newPath;
+                FM.onPathChanged(panel, panel.Path);
+            }
+        })
+    };
+
     FM.renderDisk = function (panel) {
         var selectNode = document.createElement("select");
         for (var i = 0; i < panel.Disks.length; i++) {
@@ -260,34 +280,47 @@
         var tableNode = document.createElement("table");
         var header = tableNode.createTHead();
         var hRow = header.insertRow(0);
+
         var hCell = hRow.insertCell(0);
         hCell.innerHTML = "<b>Имя</b>";
+        hCell.align = "center";
+
         hCell = hRow.insertCell(1);
         hCell.innerHTML = "<b>Размер</b>";
+        hCell.align = "center";
+
         hCell = hRow.insertCell(2);
         hCell.innerHTML = "<b>Дата измерения</b>";
+        hCell.align = "center";
+
         hCell = hRow.insertCell(3);
         hCell.innerHTML = "<b>Атрибуты</b>";
+        hCell.align = "center";
+
         var body = tableNode.createTBody();
         panel.Files.forEach(function (item, i, files) {
             var bRow = body.insertRow(i);
+
             var bCell = bRow.insertCell(0);
             bCell.innerHTML = item.nameFile;
+            _addIcon(bCell, item.typeFile);
+
+            bCell = bRow.insertCell(1);
+            bCell.align = "center";
             if (item.typeFile == "folder") {
-                var temp = bCell.innerHTML;
-                bCell.innerHTML = "<img src='images/folder.png' width='25' height='25' align='left'>" + temp;
-                bCell = bRow.insertCell(1);
                 bCell.innerHTML = "<папка>";
             }
             else {
-                _addIcon(bCell, item.typeFile);
-                bCell = bRow.insertCell(1);
                 bCell.innerHTML = item.sizeFile;
             }
+
             bCell = bRow.insertCell(2);
+            bCell.align = "center";
             var date = new Date(item.dateChange);
             bCell.innerHTML = date.toLocaleString();
+
             bCell = bRow.insertCell(3);
+            bCell.align = "center";
             bCell.innerHTML = item.attributes;
             if (item.typeFile == "folder") {
                 $(bRow).dblclick(
@@ -315,7 +348,7 @@
     };
 
     FM.renderToolBar = function () {
-        var btnCopy = _cresteButton("btnCopy", "Копирование");
+        var btnCopy = _createButton("btnCopy", "Копирование");
         $(btnCopy).click(
             function () {
                 if (model.Left.active) {
@@ -332,7 +365,7 @@
             }
         );
 
-        var btnMove = _cresteButton("btnMove", "Перемещение");
+        var btnMove = _createButton("btnMove", "Перемещение");
         $(btnMove).click(
             function () {
                 if (model.Left.active) {
@@ -349,7 +382,7 @@
             }
         );
 
-        var btnFolder = _cresteButton("btnFolder", "Каталог");
+        var btnFolder = _createButton("btnFolder", "Каталог");
         $(btnFolder).click(
             function () {
                 var result = prompt("Создать новый каталог (папку)", "Новая папка");
@@ -364,7 +397,7 @@
             }
         );
 
-        var btnDelete = _cresteButton("btnDelete", "Удаление");
+        var btnDelete = _createButton("btnDelete", "Удаление");
         $(btnDelete).click(
             function () {
                 var result = confirm("Удалить файлы?");
@@ -384,6 +417,28 @@
         );
     }
 
+    FM.renderBtnRefresh = function (idParent, panel) {
+        var btnRefresh = document.createElement("button");
+        btnRefresh.innerHTML = "<img src='images/refresh.png' style='vertical-align: middle' width='18' height='18'>";
+        _appendChild(idParent, btnRefresh);
+        $(btnRefresh).click(
+            function () {
+                FM.onPathChanged(panel, panel.Path);
+            }
+        );
+    }
+
+    FM.renderGoUp = function (idParent, panel) {
+        var btnGoUp = document.createElement("button");
+        btnGoUp.innerHTML = "<img src='images/go-up.png' style='vertical-align: middle' width='18' height='18'>";
+        _appendChild(idParent, btnGoUp);
+        $(btnGoUp).click(
+            function () {
+                FM.onGoUp(panel);
+            }
+        );
+    }
+
     FM.refreshPath = function (panel) {
         if (panel.id == "Left") {
             viewModel.Left.TextNode.value = panel.Path;
@@ -393,7 +448,7 @@
         }
     }
 
-    function _cresteButton(idParent, name) {
+    function _createButton(idParent, name) {
         var btnToolBar = document.createElement("input");
         btnToolBar.type = "button";
         btnToolBar.value = name;

@@ -15,18 +15,22 @@
 <table class="FM" cellpadding="0" cellspacing="0">
     <tr>
         <td id="lDisk" class="Disk"></td>
+        <td id="lBtnRefresh" class="btn"></td>
+        <td id="lBtnUp" class="btn"></td>
         <td id="lPath" class="Path"></td>
         <td id="rDisk" class="Disk"></td>
+        <td id="rBtnRefresh" class="btn"></td>
+        <td id="rBtnUp" class="btn"></td>
         <td id="rPath" class="Path"></td>
     </tr>
     <tr>
-        <td colspan="2" class="Panel"><div id="lTable" class="Table"></div></td>
-        <td colspan="2" class="Panel"><div  id="rTable" class="Table"></div></td>
+        <td colspan="4" class="Panel"><div id="lTable" class="Table"></div></td>
+        <td colspan="4" class="Panel"><div  id="rTable" class="Table"></div></td>
     </tr>
     <tr id="ToolBar" class="ToolBar">
-        <td id="btnCopy" class="btnToolBar"></td>
+        <td colspan="3" id="btnCopy" class="btnToolBar"></td>
         <td id="btnMove" class="btnToolBar"></td>
-        <td id="btnFolder" class="btnToolBar"></td>
+        <td colspan="3" id="btnFolder" class="btnToolBar"></td>
         <td id="btnDelete" class="btnToolBar"></td>
     </tr>
 </table>

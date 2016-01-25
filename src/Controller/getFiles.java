@@ -13,9 +13,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * Created by Serg on 10.01.2016.
- */
 @WebServlet("/getFiles")
 public class getFiles extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
