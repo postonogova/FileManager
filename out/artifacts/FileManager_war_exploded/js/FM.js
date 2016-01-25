@@ -1,6 +1,3 @@
-/**
- * Created by postonogova on 18.01.2016.
- */
 (function () {
 
     var FM = window.FM = {};
@@ -247,7 +244,7 @@
                 path: panel.Path
             },
             success: function (result) {
-                var newPath = (result == null)? panel.Path : result;
+                var newPath = (result == null) ? panel.Path : result;
                 panel.Path = newPath;
                 FM.onPathChanged(panel, panel.Path);
             }
@@ -339,13 +336,13 @@
                      })(item)*/
                 );
             }
-        $(bRow).click(
-            function () {
-                FM.onSelectChanged(panel, bRow, item)
-            }
-        );
-        // }
-    })
+            $(bRow).click(
+                function () {
+                    FM.onSelectChanged(panel, bRow, item)
+                }
+            );
+            // }
+        })
         ;
         return tableNode;
     };
@@ -477,7 +474,8 @@
         var temp = cell.innerHTML;
         var str = "images/";
         switch (typeFile) {
-            case "folder": str += "folder.png";
+            case "folder":
+                str += "folder.png";
                 break;
             case "acc":
             case "avi":
@@ -511,12 +509,14 @@
             case "wav":
             case "wma":
             case "xls":
-            case "xml": str += "file_" + typeFile + ".png";
+            case "xml":
+                str += "file_" + typeFile + ".png";
                 break;
-            default: str += "document.png";
+            default:
+                str += "document.png";
         }
 
-        cell.innerHTML = "<img src="+str+" width='25' height='25' align='left'>" + temp;
+        cell.innerHTML = "<img src=" + str + " width='25' height='25' align='left'>" + temp;
     }
 
 })();

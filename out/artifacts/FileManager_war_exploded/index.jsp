@@ -1,9 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Serg
-  Date: 09.01.2016
-  Time: 22:35
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

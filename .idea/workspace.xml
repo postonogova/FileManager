@@ -2,25 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2099dfce-3f7a-497f-bb8c-19de866b0c3d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/GetParent.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Model/MyFileCopyVisitor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FileManager/Model/MyFileCopyVisitor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/refresh_22.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Controller/CopyFiles.class" afterPath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Controller/CopyFiles.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Controller/CreateDirectory.class" afterPath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Controller/CreateDirectory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Controller/DeleteFiles.class" afterPath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Controller/DeleteFiles.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Controller/GetParent.class" afterPath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Controller/GetParent.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Controller/MoveFiles.class" afterPath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Controller/MoveFiles.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Controller/getFiles.class" afterPath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Controller/getFiles.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Model/FileInfo.class" afterPath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Model/FileInfo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Model/FileManager.class" afterPath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/WEB-INF/classes/Model/FileManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FileManager/Model/FileManager.class" afterPath="$PROJECT_DIR$/out/production/FileManager/Model/FileManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/js/FM.js" afterPath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/js/FM.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/style/FM.css" afterPath="$PROJECT_DIR$/out/artifacts/FileManager_war_exploded/style/FM.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/CopyFiles.java" afterPath="$PROJECT_DIR$/src/Controller/CopyFiles.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/CreateDirectory.java" afterPath="$PROJECT_DIR$/src/Controller/CreateDirectory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/DeleteFiles.java" afterPath="$PROJECT_DIR$/src/Controller/DeleteFiles.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/MoveFiles.java" afterPath="$PROJECT_DIR$/src/Controller/MoveFiles.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/getFiles.java" afterPath="$PROJECT_DIR$/src/Controller/getFiles.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/FileInfo.java" afterPath="$PROJECT_DIR$/src/Model/FileInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/FileManager.java" afterPath="$PROJECT_DIR$/src/Model/FileManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/FM.js" afterPath="$PROJECT_DIR$/web/js/FM.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/style/FM.css" afterPath="$PROJECT_DIR$/web/style/FM.css" />
     </list>
     <ignored path="FileManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,14 +39,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FileManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FileManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/FileManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.41918296">
+              <caret line="89" column="71" selection-start-line="89" selection-start-column="71" selection-end-line="89" selection-end-column="71" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1088#1098#0" expanded="true" />
+                <element signature="initializer##0;class#FileManager#0" expanded="false" />
+                <element signature="method#getFileExtension#0;class#FileManager#0" expanded="false" />
+                <element signature="method#FileManager#0;class#FileManager#0" expanded="false" />
+                <element signature="method#GetFiles#0;class#FileManager#0" expanded="false" />
+                <element signature="method#joinLists#0;class#FileManager#0" expanded="false" />
+                <element signature="method#copy#0;class#FileManager#0" expanded="false" />
+                <element signature="method#MoveFiles#0;class#FileManager#0" expanded="false" />
+                <element signature="method#DeleteFiles#0;class#FileManager#0" expanded="false" />
+                <element signature="method#delete#0;class#FileManager#0" expanded="false" />
+                <element signature="method#CreateDirectory#0;class#FileManager#0" expanded="false" />
+                <element signature="method#GetParent#0;class#FileManager#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -59,8 +64,8 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.192307">
+              <caret line="29" column="8" selection-start-line="8" selection-start-column="0" selection-end-line="29" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -69,23 +74,24 @@
       <file leaf-file-name="FM.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/style/FM.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.038462">
+            <state vertical-scroll-proportion="-0.6923077">
               <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FM.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FM.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/FM.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
               <folding>
                 <element signature="e#72#475#0" expanded="false" />
                 <element signature="e#513#800#0" expanded="false" />
                 <element signature="e#828#2202#0" expanded="false" />
                 <element signature="e#2254#2596#0" expanded="false" />
+                <element signature="e#2631#3739#0" expanded="false" />
                 <element signature="e#3788#3904#0" expanded="false" />
                 <element signature="e#3953#4835#0" expanded="false" />
                 <element signature="e#4890#5805#0" expanded="false" />
@@ -93,18 +99,20 @@
                 <element signature="e#6260#6661#0" expanded="false" />
                 <element signature="e#6716#6999#0" expanded="false" />
                 <element signature="e#7061#7387#0" expanded="false" />
-                <element signature="e#7844#8460#0" expanded="false" />
-                <element signature="e#8500#8691#0" expanded="false" />
-                <element signature="e#8732#10893#0" expanded="false" />
-                <element signature="e#10931#13511#0" expanded="false" />
-                <element signature="e#12311#12735#0" expanded="false" />
-                <element signature="e#14346#14555#0" expanded="false" />
-                <element signature="e#14600#14805#0" expanded="false" />
-                <element signature="e#14843#14957#0" expanded="false" />
-                <element signature="e#15034#15281#0" expanded="false" />
-                <element signature="e#15321#16490#0" expanded="false" />
-                <marker date="1453717970454" expanded="true" signature="13696:13718" placeholder="..." />
-                <marker date="1453717970454" expanded="true" signature="14099:14121" placeholder="..." />
+                <element signature="e#7423#7805#0" expanded="false" />
+                <element signature="e#7845#8461#0" expanded="false" />
+                <element signature="e#8501#8692#0" expanded="false" />
+                <element signature="e#8733#10922#0" expanded="false" />
+                <element signature="e#10960#13540#0" expanded="false" />
+                <element signature="e#12340#12764#0" expanded="false" />
+                <element signature="e#13595#13957#0" expanded="false" />
+                <element signature="e#14375#14584#0" expanded="false" />
+                <element signature="e#14629#14834#0" expanded="false" />
+                <element signature="e#14872#14986#0" expanded="false" />
+                <element signature="e#15063#15310#0" expanded="false" />
+                <element signature="e#15350#16571#0" expanded="false" />
+                <marker date="1453729536504" expanded="true" signature="13725:13747" placeholder="..." />
+                <marker date="1453729536504" expanded="true" signature="14128:14150" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -159,8 +167,8 @@
         <option value="$PROJECT_DIR$/src/Controller/GetParent.java" />
         <option value="$PROJECT_DIR$/src/Controller/MoveFiles.java" />
         <option value="$PROJECT_DIR$/src/Model/FileInfo.java" />
-        <option value="$PROJECT_DIR$/src/Model/FileManager.java" />
         <option value="$PROJECT_DIR$/web/js/FM.js" />
+        <option value="$PROJECT_DIR$/src/Model/FileManager.java" />
       </list>
     </option>
   </component>
@@ -214,6 +222,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -339,8 +349,6 @@
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -871,12 +879,14 @@
       <workItem from="1453294911506" duration="34000" />
       <workItem from="1453367863894" duration="610000" />
       <workItem from="1453535222478" duration="56615000" />
-      <workItem from="1453704113245" duration="13685000" />
+      <workItem from="1453704113245" duration="18075000" />
+      <workItem from="1453730344296" duration="168000" />
+      <workItem from="1453731114700" duration="407000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153728000" />
+    <option name="totallyTimeSpent" value="158693000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -888,34 +898,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
+    <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32337245" sideWeight="0.5022051" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25383306" sideWeight="0.49779493" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.163142" sideWeight="0.47031963" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.163142" sideWeight="0.5296804" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16282527" sideWeight="0.5296804" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.163142" sideWeight="0.5296804" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39693356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39693356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879046" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25383306" sideWeight="0.49779493" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32870865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -967,7 +977,7 @@
           <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="48" />
+      <option name="time" value="50" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -997,7 +1007,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1006,7 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="19" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,7 +1031,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1030,9 +1041,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1053,6 +1062,7 @@
             <element signature="e#513#800#0" expanded="false" />
             <element signature="e#828#2202#0" expanded="false" />
             <element signature="e#2254#2596#0" expanded="false" />
+            <element signature="e#2631#3739#0" expanded="false" />
             <element signature="e#3788#3904#0" expanded="false" />
             <element signature="e#3953#4835#0" expanded="false" />
             <element signature="e#4890#5805#0" expanded="false" />
@@ -1060,18 +1070,20 @@
             <element signature="e#6260#6661#0" expanded="false" />
             <element signature="e#6716#6999#0" expanded="false" />
             <element signature="e#7061#7387#0" expanded="false" />
-            <element signature="e#7844#8460#0" expanded="false" />
-            <element signature="e#8500#8691#0" expanded="false" />
-            <element signature="e#8732#10893#0" expanded="false" />
-            <element signature="e#10931#13511#0" expanded="false" />
-            <element signature="e#12311#12735#0" expanded="false" />
-            <element signature="e#14346#14555#0" expanded="false" />
-            <element signature="e#14600#14805#0" expanded="false" />
-            <element signature="e#14843#14957#0" expanded="false" />
-            <element signature="e#15034#15281#0" expanded="false" />
-            <element signature="e#15321#16490#0" expanded="false" />
-            <marker date="1453717970454" expanded="true" signature="13696:13718" placeholder="..." />
-            <marker date="1453717970454" expanded="true" signature="14099:14121" placeholder="..." />
+            <element signature="e#7423#7805#0" expanded="false" />
+            <element signature="e#7845#8461#0" expanded="false" />
+            <element signature="e#8501#8692#0" expanded="false" />
+            <element signature="e#8733#10922#0" expanded="false" />
+            <element signature="e#10960#13540#0" expanded="false" />
+            <element signature="e#12340#12764#0" expanded="false" />
+            <element signature="e#13595#13957#0" expanded="false" />
+            <element signature="e#14375#14584#0" expanded="false" />
+            <element signature="e#14629#14834#0" expanded="false" />
+            <element signature="e#14872#14986#0" expanded="false" />
+            <element signature="e#15063#15310#0" expanded="false" />
+            <element signature="e#15350#16571#0" expanded="false" />
+            <marker date="1453729536504" expanded="true" signature="13725:13747" placeholder="..." />
+            <marker date="1453729536504" expanded="true" signature="14128:14150" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1089,8 +1101,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="98" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="98" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1088#1098#0" expanded="true" />
+            <element signature="initializer##0;class#FileManager#0" expanded="false" />
+            <element signature="method#getFileExtension#0;class#FileManager#0" expanded="false" />
+            <element signature="method#FileManager#0;class#FileManager#0" expanded="false" />
+            <element signature="method#GetFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#joinLists#0;class#FileManager#0" expanded="false" />
+            <element signature="method#copy#0;class#FileManager#0" expanded="false" />
+            <element signature="method#MoveFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#DeleteFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#delete#0;class#FileManager#0" expanded="false" />
+            <element signature="method#CreateDirectory#0;class#FileManager#0" expanded="false" />
+            <element signature="method#GetParent#0;class#FileManager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1099,7 +1120,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1115,7 +1135,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1123,9 +1145,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1141,7 +1161,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="19" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1157,7 +1176,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1165,9 +1186,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,6 +1207,7 @@
             <element signature="e#513#800#0" expanded="false" />
             <element signature="e#828#2202#0" expanded="false" />
             <element signature="e#2254#2596#0" expanded="false" />
+            <element signature="e#2631#3739#0" expanded="false" />
             <element signature="e#3788#3904#0" expanded="false" />
             <element signature="e#3953#4835#0" expanded="false" />
             <element signature="e#4890#5805#0" expanded="false" />
@@ -1195,18 +1215,20 @@
             <element signature="e#6260#6661#0" expanded="false" />
             <element signature="e#6716#6999#0" expanded="false" />
             <element signature="e#7061#7387#0" expanded="false" />
-            <element signature="e#7844#8460#0" expanded="false" />
-            <element signature="e#8500#8691#0" expanded="false" />
-            <element signature="e#8732#10893#0" expanded="false" />
-            <element signature="e#10931#13511#0" expanded="false" />
-            <element signature="e#12311#12735#0" expanded="false" />
-            <element signature="e#14346#14555#0" expanded="false" />
-            <element signature="e#14600#14805#0" expanded="false" />
-            <element signature="e#14843#14957#0" expanded="false" />
-            <element signature="e#15034#15281#0" expanded="false" />
-            <element signature="e#15321#16490#0" expanded="false" />
-            <marker date="1453717970454" expanded="true" signature="13696:13718" placeholder="..." />
-            <marker date="1453717970454" expanded="true" signature="14099:14121" placeholder="..." />
+            <element signature="e#7423#7805#0" expanded="false" />
+            <element signature="e#7845#8461#0" expanded="false" />
+            <element signature="e#8501#8692#0" expanded="false" />
+            <element signature="e#8733#10922#0" expanded="false" />
+            <element signature="e#10960#13540#0" expanded="false" />
+            <element signature="e#12340#12764#0" expanded="false" />
+            <element signature="e#13595#13957#0" expanded="false" />
+            <element signature="e#14375#14584#0" expanded="false" />
+            <element signature="e#14629#14834#0" expanded="false" />
+            <element signature="e#14872#14986#0" expanded="false" />
+            <element signature="e#15063#15310#0" expanded="false" />
+            <element signature="e#15350#16571#0" expanded="false" />
+            <marker date="1453729536504" expanded="true" signature="13725:13747" placeholder="..." />
+            <marker date="1453729536504" expanded="true" signature="14128:14150" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1224,8 +1246,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="98" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="98" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1088#1098#0" expanded="true" />
+            <element signature="initializer##0;class#FileManager#0" expanded="false" />
+            <element signature="method#getFileExtension#0;class#FileManager#0" expanded="false" />
+            <element signature="method#FileManager#0;class#FileManager#0" expanded="false" />
+            <element signature="method#GetFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#joinLists#0;class#FileManager#0" expanded="false" />
+            <element signature="method#copy#0;class#FileManager#0" expanded="false" />
+            <element signature="method#MoveFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#DeleteFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#delete#0;class#FileManager#0" expanded="false" />
+            <element signature="method#CreateDirectory#0;class#FileManager#0" expanded="false" />
+            <element signature="method#GetParent#0;class#FileManager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1234,7 +1265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="20" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1250,7 +1280,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="91" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="91" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1258,9 +1290,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1269,8 +1299,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="18" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1088#1098#0" expanded="true" />
+            <element signature="initializer##0;class#FileManager#0" expanded="false" />
+            <element signature="method#getFileExtension#0;class#FileManager#0" expanded="false" />
+            <element signature="method#FileManager#0;class#FileManager#0" expanded="false" />
+            <element signature="method#GetFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#joinLists#0;class#FileManager#0" expanded="false" />
+            <element signature="method#copy#0;class#FileManager#0" expanded="false" />
+            <element signature="method#MoveFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#DeleteFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#delete#0;class#FileManager#0" expanded="false" />
+            <element signature="method#CreateDirectory#0;class#FileManager#0" expanded="false" />
+            <element signature="method#GetParent#0;class#FileManager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1279,7 +1318,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="20" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1295,7 +1333,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="53" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="53" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1303,9 +1343,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1314,8 +1352,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1088#1098#0" expanded="true" />
+            <element signature="initializer##0;class#FileManager#0" expanded="false" />
+            <element signature="method#getFileExtension#0;class#FileManager#0" expanded="false" />
+            <element signature="method#FileManager#0;class#FileManager#0" expanded="false" />
+            <element signature="method#GetFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#joinLists#0;class#FileManager#0" expanded="false" />
+            <element signature="method#copy#0;class#FileManager#0" expanded="false" />
+            <element signature="method#MoveFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#DeleteFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#delete#0;class#FileManager#0" expanded="false" />
+            <element signature="method#CreateDirectory#0;class#FileManager#0" expanded="false" />
+            <element signature="method#GetParent#0;class#FileManager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1324,7 +1371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33252427">
           <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1340,7 +1386,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33252427">
           <caret line="148" column="13" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1356,7 +1401,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1382,7 +1427,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1391,14 +1436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/GetParent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1415,18 +1452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/FileManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1088#1098#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1434,37 +1459,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/style/FM.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/FM.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
           <folding>
             <element signature="e#72#475#0" expanded="false" />
             <element signature="e#513#800#0" expanded="false" />
             <element signature="e#828#2202#0" expanded="false" />
             <element signature="e#2254#2596#0" expanded="false" />
+            <element signature="e#2631#3739#0" expanded="false" />
             <element signature="e#3788#3904#0" expanded="false" />
             <element signature="e#3953#4835#0" expanded="false" />
             <element signature="e#4890#5805#0" expanded="false" />
@@ -1472,18 +1479,64 @@
             <element signature="e#6260#6661#0" expanded="false" />
             <element signature="e#6716#6999#0" expanded="false" />
             <element signature="e#7061#7387#0" expanded="false" />
-            <element signature="e#7844#8460#0" expanded="false" />
-            <element signature="e#8500#8691#0" expanded="false" />
-            <element signature="e#8732#10893#0" expanded="false" />
-            <element signature="e#10931#13511#0" expanded="false" />
-            <element signature="e#12311#12735#0" expanded="false" />
-            <element signature="e#14346#14555#0" expanded="false" />
-            <element signature="e#14600#14805#0" expanded="false" />
-            <element signature="e#14843#14957#0" expanded="false" />
-            <element signature="e#15034#15281#0" expanded="false" />
-            <element signature="e#15321#16490#0" expanded="false" />
-            <marker date="1453717970454" expanded="true" signature="13696:13718" placeholder="..." />
-            <marker date="1453717970454" expanded="true" signature="14099:14121" placeholder="..." />
+            <element signature="e#7423#7805#0" expanded="false" />
+            <element signature="e#7845#8461#0" expanded="false" />
+            <element signature="e#8501#8692#0" expanded="false" />
+            <element signature="e#8733#10922#0" expanded="false" />
+            <element signature="e#10960#13540#0" expanded="false" />
+            <element signature="e#12340#12764#0" expanded="false" />
+            <element signature="e#13595#13957#0" expanded="false" />
+            <element signature="e#14375#14584#0" expanded="false" />
+            <element signature="e#14629#14834#0" expanded="false" />
+            <element signature="e#14872#14986#0" expanded="false" />
+            <element signature="e#15063#15310#0" expanded="false" />
+            <element signature="e#15350#16571#0" expanded="false" />
+            <marker date="1453729536504" expanded="true" signature="13725:13747" placeholder="..." />
+            <marker date="1453729536504" expanded="true" signature="14128:14150" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/style/FM.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6923077">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.192307">
+          <caret line="29" column="8" selection-start-line="8" selection-start-column="0" selection-end-line="29" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/GetParent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/FileManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41918296">
+          <caret line="89" column="71" selection-start-line="89" selection-start-column="71" selection-end-line="89" selection-end-column="71" />
+          <folding>
+            <element signature="initializer##0;class#FileManager#0" expanded="false" />
+            <element signature="method#getFileExtension#0;class#FileManager#0" expanded="false" />
+            <element signature="method#FileManager#0;class#FileManager#0" expanded="false" />
+            <element signature="method#GetFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#joinLists#0;class#FileManager#0" expanded="false" />
+            <element signature="method#copy#0;class#FileManager#0" expanded="false" />
+            <element signature="method#MoveFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#DeleteFiles#0;class#FileManager#0" expanded="false" />
+            <element signature="method#delete#0;class#FileManager#0" expanded="false" />
+            <element signature="method#CreateDirectory#0;class#FileManager#0" expanded="false" />
+            <element signature="method#GetParent#0;class#FileManager#0" expanded="false" />
           </folding>
         </state>
       </provider>
